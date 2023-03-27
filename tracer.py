@@ -2,7 +2,7 @@ import gdb
 enable_syscall_trace = False
 syscalls = ['mmap', 'read', 'write', 'brk', 'open', 'mprotect']
 syscall_str = ' '.join(syscalls)
-sym = ['- START_TRACE - ']
+sym = ['START_TRACE']
 def stop_handler(stopEvent):
     global sym
     sym_ = gdb.execute("info symbol $rip",to_string=True)
