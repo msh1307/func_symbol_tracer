@@ -77,11 +77,20 @@ EX 2 - syscall trace on)
 1   |   go
 2   |     malloc@plt
 3   |       malloc
-4   |   go
-5   |     go1
-6   |       read@plt
-7   |         read
-8   |     go1
-9   |   go
-10  |     main
+4   |         brk
+5   |           sbrk
+6   |         brk
+7   |           sbrk
+8   |             __default_morecore
+9   |               sysmalloc
+10  |                 _int_malloc
+11  |                   tcache_init.part
+12  |       malloc
+13  |   go
+14  |     go1
+15  |       free@plt
+16  |         free
+17  |     go1
+18  |   go
+19  |     main
 ```
