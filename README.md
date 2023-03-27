@@ -1,7 +1,7 @@
 # func_symbol_tracer
 EX 1 - syscall trace off) 
 ```c
-0   | - START_TRACE -
+0   | START TRACE
 1   |   uc_mem_map@plt
 2   |     uc_mem_map
 3   |       g_tree_new_full@plt
@@ -73,7 +73,7 @@ EX 1 - syscall trace off)
 ```
 EX 2 - syscall trace on)
 ```c
-0   | - START_TRACE -
+0   | main
 1   |   go
 2   |     malloc@plt
 3   |       malloc
@@ -85,12 +85,12 @@ EX 2 - syscall trace on)
 9   |               sysmalloc
 10  |                 _int_malloc
 11  |                   tcache_init.part
-12  |       malloc
+12  |                     malloc_hook_ini
 13  |   go
 14  |     go1
 15  |       free@plt
 16  |         free
 17  |     go1
 18  |   go
-19  |     main
+19  | main
 ```
