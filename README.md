@@ -72,7 +72,7 @@ EX 1 - syscall trace off)
 68  |       mem_map.isra
 ```
 EX 2 - syscall trace on)
-```
+```c
 0   | - START_TRACE -
 1   |   go
 2   |     malloc@plt
