@@ -1,5 +1,4 @@
 import gdb
-
 enable_syscall_trace = True
 syscalls = ['mmap', 'read', 'write', 'brk', 'open', 'mprotect']
 syscall_str = ' '.join(syscalls)
